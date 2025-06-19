@@ -1,6 +1,31 @@
+/* static/css/style.css */
+
+body.home-page {
+  background-color: #caeef1; /* Light Blue for Home */
+}
+
+body.about-page {
+  background-color: #d6e5f7; /* Light Pink for About */
+}
+
+body.services-page {
+  background-color: #eccbe7; /* Light Orange for Services */
+}
+
+body.contact-page {
+  background-color: #c1add9; /* Light Purple for Contact */
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
 }
-footer {
-  margin-top: 50px;
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
 }
+

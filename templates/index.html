@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Deepthi Sannayila - Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="home-page">
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Deepthi Sannayila</a>
@@ -14,25 +17,58 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="text-center bg-primary text-white p-5">
+  <header class="bg-primary text-white p-5 position-relative">
+  <div class="container">
     <h1>Hello, I'm Deepthi Sannayila</h1>
     <p class="lead">Python Developer | AI Enthusiast | Problem Solver</p>
-  </header>
 
-  <main class="container text-center my-5">
-    <h2>Career Objective</h2>
-    <p>Python Developer with a strong background in AI, data analysis, and software engineering. Passionate about building scalable solutions using machine learning and data-driven insights.</p>
-  </main>
+    <!-- Profile Picture in Top-Right -->
+    <img src="{{ url_for('static', filename='images/deepthi.jpg') }}"
+         alt="Deepthi"
+         class="position-absolute top-0 end-0 m-4 rounded-circle"
+         style="width: 120px; height: 120px; object-fit: cover; border: 3px solid white;">
+  </div>
+</header>
 
-  <footer class="bg-dark text-white text-center p-3">
-    &copy; 2025 Deepthi Sannayila | All rights reserved
-  </footer>
-</body>
-</html>
+
+ <main class="container text-center my-5">
+  <h2>Career Objective</h2>
+  <p>Python Developer with a strong background in AI, data analysis, and software engineering. Passionate about building scalable solutions using machine learning and data-driven insights.</p>
+
+  <!-- 🔥 New Content Section -->
+  <section class="mt-5 p-4" style="background-color: #87c7db;">
+    <h3>Why Choose Me?</h3>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="p-3 border rounded shadow-sm bg-light">
+          <h5>AI & ML Expertise</h5>
+          <p>Skilled in building intelligent systems using TensorFlow, Scikit-learn, and NLP techniques.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 border rounded shadow-sm bg-light">
+          <h5>Full-Stack Projects</h5>
+          <p>Built complete apps using React, Node.js, MongoDB & Python — from design to deployment.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 border rounded shadow-sm bg-light">
+          <h5>Problem Solver</h5>
+          <p>Solved 400+ coding problems on GeeksforGeeks and 200+ coding problems on LeetCode</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <a href="{{ url_for('static', filename='files/DeephiSannayila_resume.pdf') }}" download
+   class="btn btn-success position-fixed bottom-0 start-0 m-4">
+  📄 Download Resume
+</a>
+
+</main>
